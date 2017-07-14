@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h2>Welcome to Acme Products!! </h2>
+Our top selling product is <a href="/products/{{favorite.id}}">{{favorite.name}}</a> <br>
+<a href='/products' > See all of our products! </a>
+{% endblock%}
+

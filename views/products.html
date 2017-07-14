@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block productList %}
+	<h2> List: </h2>
+	<ul>
+		{% for product in products %}
+		<li><a href="/products/{{product.id}}">{{product.name}} | {{product.rating}}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock%}
