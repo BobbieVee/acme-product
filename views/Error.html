@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+
+	<div class='well bg-danger'>
+		<h4> Meep, meep! {{message}} </h4>
+		<form action='/products' method='get'>
+			<button class='btn btn-default' type='submit' >Try again?</button>
+		</form>		
+	</div>
+
+	
+
+{% endblock%}

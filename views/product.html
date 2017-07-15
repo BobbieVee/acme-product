@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
-{% block product %}
-	<h2> {{product.name}} </h2>
 
+{% block body %}
+	<div class='well'>
+		<h4> {{product.name}} </h4>
+		<form method='post' action='/products/{{product.id}}?_method=DELETE'>
+			<button class='btn btn-danger' type='submit' >Delete</button>
+		</form>		
+	</div>
 {% endblock%}

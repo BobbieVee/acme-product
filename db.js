@@ -1,4 +1,4 @@
-const data = [];
+let data = [];
 
 const add = (name, rating) => {
 	var id = data.reduce((memo, obj) => {
@@ -7,6 +7,12 @@ const add = (name, rating) => {
 	}, 0) + 1;
 	data.push({'id': id, 'name': name, 'rating': rating})
 } 
+
+const remove = (id) => {
+	data = data.filter((product) => {
+		return product.id !== id
+	})
+}
 
 const list = () => data;
 
@@ -18,15 +24,18 @@ const find = (id) => {
 
 const favorite = () => {
 	return data.reduce((obj, product) => {
-		console.log('product, obj = ', product, obj)
 		return product.rating > obj.rating ? product : obj;
 	}, {rating: -1});
 };
 
-add('Thai Food', 8);
-add('Casual Chicken', 5);
-add('Open Market', 7);
+const seed = () => {
+	data = [];
+	add('Thai Food', 8);
+	add('Casual Chicken', 5);
+	add('Open Market', 7);
+};
 
-// console.log('data = ', data);
+seed();
+// remove(1);
 
-module.exports = {add: add, list: list, find: find, favorite: favorite	};
+module.exports = {add: add, list: list, find: find, favorite: favorite, seed: seed, remove: remove	};

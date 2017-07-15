@@ -2,14 +2,27 @@
 <html>
 <head>
 	<title>Meep, Meep! Acme Products</title>
+	<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+	<style>
+		body {
+		    background-image: url("./server.jpg");
+		}
+</style
 </head>
-<body>
-	<a href="/">Home</a>
-	<h1>Meep, Meep! Acme Products</h1>
-	{% block body %} {% endblock %}
-	{% block productList %} {% endblock%}
-	{% block product %} {% endblock%}
+<body> 
+<nav  class="navbar navbar-toggleable-md"> 
+	<b><a href="/" style='color:#FF0000'>Home</a> | 
+	<a href="/products"  style='color:#FF0000'>Products</a> | 
+	<a href="/seed" style='color:#FF0000'>Seed</a></b>
+</nav>
 
+<div class='container'>
+	<div class='well'>
+		<h1 style="color:#FF0000">Acme Products</h1>
+	</div>
+
+	{% block body %} {% endblock %}
+</div>
 
 
 </body>
