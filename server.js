@@ -20,5 +20,5 @@ nunjucks.configure('views', {noCache: true});
 
 app.use('/', routes)
 
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening intently on port ${port}`) );
