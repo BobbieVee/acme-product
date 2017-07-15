@@ -36,6 +36,5 @@ const seed = () => {
 };
 
 seed();
-// remove(1);
 
 module.exports = {add: add, list: list, find: find, favorite: favorite, seed: seed, remove: remove	};
